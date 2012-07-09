@@ -8,3 +8,22 @@ function setLeft(element, pixels) {
   var value = pixels + 'px';
   setStyleAttr(element, 'left', value);
 }
+
+function scroll(element, from, to, speed) {
+  // speed is how many pixels to move every 20 milliseconds
+  var curr = from;
+
+  function move() {
+    setLeft(element, curr);
+
+    curr += speed;
+
+    if (curr == to)
+      clearInterval(loop);
+
+    if (curr > to)
+      curr = to;
+  }
+
+  var loop = setInterval(move, 20);
+}
