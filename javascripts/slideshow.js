@@ -12,6 +12,7 @@ function setLeft(element, pixels) {
 function scroll(element, from, to, speed) {
   // speed is how many pixels to move every 50 milliseconds
   var curr = from;
+  var direction = (from < to ? 1 : -1);
 
   function move() {
     setLeft(element, curr);
@@ -19,7 +20,7 @@ function scroll(element, from, to, speed) {
     if (curr == to)
       clearInterval(loop);
 
-    curr = curr + Math.min(speed, to - curr);
+    curr = curr + direction * Math.min(speed, Math.abs(to - curr));
   }
 
   var loop = setInterval(move, 50);
