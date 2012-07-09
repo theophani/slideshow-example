@@ -26,10 +26,6 @@ function scroll(element, from, to, speed) {
   var loop = setInterval(move, 50);
 }
 
-/*
-Try:
-> scroll(filmroll, 0, 300, 10);
-> scroll(filmroll, 0, -300, 10);
-> scroll(filmroll, -300, -600, 10);
-> scroll(filmroll, -600, 0, 10);
-*/
+document.addEventListener('keyup', function (e) {
+  console.log(e.keyCode);
+});
