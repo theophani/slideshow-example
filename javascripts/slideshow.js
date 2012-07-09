@@ -13,18 +13,14 @@ function scroll(element, from, to, speed) {
   // speed is how many pixels to move every 50 milliseconds
   var curr = from;
   var direction = (from < to ? 1 : -1);
-  var max = Math.abs(to);
 
   function move() {
-    var delta = Math.min(speed, Math.abs(to - curr));
-    var pixels = curr + delta;
+    setLeft(element, curr);
 
-    setLeft(element, direction * pixels);
-
-    curr += speed;
-
-    if (curr >= max)
+    if (curr == to)
       clearInterval(loop);
+
+    curr = curr + direction * Math.min(speed, Math.abs(to - curr));
   }
 
   var loop = setInterval(move, 50);
@@ -33,6 +29,7 @@ function scroll(element, from, to, speed) {
 /*
 Try:
 > scroll(filmroll, 0, 300, 10);
-> scroll(filmroll, 0, 300, -10); // should not allow negative speed
 > scroll(filmroll, 0, -300, 10);
+> scroll(filmroll, -300, -600, 10);
+> scroll(filmroll, -600, 0, 10);
 */
