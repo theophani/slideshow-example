@@ -3,10 +3,14 @@
   width: 800px;
   overflow: hidden;
   margin: 50px auto;
+  position: relative;
 }
 
 .filmroll {
   width: 2400px; /* 3 times 800px */
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 
 img {
