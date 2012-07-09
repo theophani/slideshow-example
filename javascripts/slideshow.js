@@ -29,6 +29,7 @@ function scroll(element, from, to, speed) {
 /*
 Try:
 > scroll(filmroll, 0, 300, 10);
-> scroll(filmroll, 0, 300, -10);
 > scroll(filmroll, 0, -300, 10);
+> scroll(filmroll, -300, -600, 10);
+> scroll(filmroll, -600, 0, 10);
 */
