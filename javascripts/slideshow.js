@@ -27,3 +27,10 @@ function scroll(element, from, to, speed) {
 
   var loop = setInterval(move, 20);
 }
+
+/*
+Try:
+> scroll(filmroll, 0, 300, 10);
+> scroll(filmroll, 0, 300, -10);
+> scroll(filmroll, 0, -300, 10);
+*/
