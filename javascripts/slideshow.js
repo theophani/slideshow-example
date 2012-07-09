@@ -10,22 +10,21 @@ function setLeft(element, pixels) {
 }
 
 function scroll(element, from, to, speed) {
-  // speed is how many pixels to move every 20 milliseconds
+  // speed is how many pixels to move every 50 milliseconds
   var curr = from;
 
   function move() {
-    setLeft(element, curr);
+    var delta = Math.min(speed, to - curr);
+
+    setLeft(element, curr + delta);
 
     curr += speed;
 
-    if (curr == to)
+    if (curr >= to)
       clearInterval(loop);
-
-    if (curr > to)
-      curr = to;
   }
 
-  var loop = setInterval(move, 20);
+  var loop = setInterval(move, 50);
 }
 
 /*
