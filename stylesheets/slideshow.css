@@ -1,5 +1,6 @@
 .picture-frame {
   height: 535px;
   width: 800px;
+  overflow: hidden;
   margin: 50px auto;
 }
