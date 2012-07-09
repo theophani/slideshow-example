@@ -1,0 +1,1 @@
+var slideshow = document.getElementById('the-picture-frame');
