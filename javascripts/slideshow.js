@@ -14,15 +14,12 @@ function scroll(element, from, to, speed) {
   var curr = from;
 
   function move() {
-    var delta = Math.min(speed, to - curr);
-    var pixels = curr + delta;
+    setLeft(element, curr);
 
-    setLeft(element, pixles);
-
-    curr += speed;
-
-    if (curr >= to)
+    if (curr == to)
       clearInterval(loop);
+
+    curr = curr + Math.min(speed, to - curr);
   }
 
   var loop = setInterval(move, 50);
