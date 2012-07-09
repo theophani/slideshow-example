@@ -15,8 +15,9 @@ function scroll(element, from, to, speed) {
 
   function move() {
     var delta = Math.min(speed, to - curr);
+    var pixels = curr + delta;
 
-    setLeft(element, curr + delta);
+    setLeft(element, pixles);
 
     curr += speed;
 
