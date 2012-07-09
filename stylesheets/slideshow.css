@@ -4,3 +4,11 @@
   overflow: hidden;
   margin: 50px auto;
 }
+
+.filmroll {
+  width: 2400px; /* 3 times 800px */
+}
+
+img {
+  float: left; /* forces the images to touch each other */
+}
