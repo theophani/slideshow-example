@@ -27,5 +27,9 @@ function scroll(element, from, to, speed) {
 }
 
 document.addEventListener('keyup', function (e) {
-  console.log(e.keyCode);
+  if (e.keyCode == 39)
+    scroll(filmroll, 0, 800, 30);
+
+  if (e.keyCode == 37)
+    scroll(filmroll, 800, 0, 30);
 });
