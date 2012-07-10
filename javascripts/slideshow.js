@@ -2,6 +2,7 @@ var filmroll = document.getElementById('the-filmroll');
 var curr = 0;
 var width = 800;
 var speed = 30;
+var scrolling = false;
 
 function setStyleAttr(element, attr, value) {
   element.style[attr] = value;
@@ -20,19 +21,27 @@ function scroll(element, from, to, speed) {
   function move() {
     setLeft(element, curr);
 
-    if (curr == to)
+    if (curr == to) {
       clearInterval(loop);
+      scrolling = false;
+    }
 
     curr = curr + direction * Math.min(speed, Math.abs(to - curr));
   }
 
   var loop = setInterval(move, 50);
+  scrolling = true;
 }
 
-document.addEventListener('keyup', function (e) {
+function backForth(e) {
   if (e.keyCode == 39)
     scroll(filmroll, curr, curr += width, speed);
 
   if (e.keyCode == 37)
     scroll(filmroll, curr, curr -= width, speed);
+}
+
+document.addEventListener('keyup', function (e) {
+  if (!scrolling)
+    backForth(e);
 });
