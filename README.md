@@ -15,6 +15,7 @@ This example could be extended to illustrate:
   (building the slideshow from an array of src paths)
 * adding event listeners to elements
   (clicking on navigation, rather than using arrow keys)
+* how to make it loop back to the start
 * the power of CSS to alter appearance
 * how a library such as jQuery could be used
 * how a plug-in could replace this code
