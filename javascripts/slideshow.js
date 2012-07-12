@@ -1,7 +1,4 @@
 var filmroll = document.getElementById('the-filmroll');
-var curr = 0;
-var width = 800;
-var speed = 30;
 
 function setStyleAttr(element, attr, value) {
   element.style[attr] = value;
@@ -28,6 +25,10 @@ function scroll(element, from, to, speed) {
 
   var loop = setInterval(move, 50);
 }
+
+var curr = 0;
+var width = 800;
+var speed = 30;
 
 document.addEventListener('keyup', function (e) {
   if (e.keyCode == 39)
