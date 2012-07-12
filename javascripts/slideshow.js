@@ -1,5 +1,3 @@
-var filmroll = document.getElementById('the-filmroll');
-
 function setStyleAttr(element, attr, value) {
   element.style[attr] = value;
 }
@@ -29,6 +27,7 @@ function scroll(element, from, to, speed) {
   scrolling = true;
 }
 
+var filmroll = document.getElementById('the-filmroll');
 var curr = 0;
 var width = 800;
 var speed = 30;
