@@ -20,10 +20,14 @@ function scroll(start, end) {
 }
 
 function handleEvent(e) {
-  if (e.keyCode == 37)
+  backAndForth(e.keyCode);
+}
+
+function backAndForth(keyCode) {
+  if (keyCode == 37)
     scroll(500, 0);
 
-  if (e.keyCode == 39)
+  if (keyCode == 39)
     scroll(0, 500);
 }
 
