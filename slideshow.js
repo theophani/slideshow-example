@@ -20,7 +20,11 @@ function scroll(start, end) {
 }
 
 function handleEvent(e) {
-  console.log(e, e.keyCode);
+  if (e.keyCode == 37)
+    scroll(500, 0);
+
+  if (e.keyCode == 39)
+    scroll(0, 500);
 }
 
 document.addEventListener('keydown', handleEvent);
