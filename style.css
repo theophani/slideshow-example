@@ -1,13 +1,13 @@
 .picture-frame {
-  height: 535px;
-  width: 800px;
+  height: 334px;
+  width: 500px;
   overflow: hidden;
   margin: 50px auto;
   position: relative;
 }
 
-.filmroll {
-  width: 2400px; /* 3 times 800px */
+.film-roll {
+  width: 1500px; /* 3 times 800px */
   position: absolute;
   left: 0px;
   top: 0px;
