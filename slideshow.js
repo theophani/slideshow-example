@@ -23,12 +23,14 @@ function handleEvent(e) {
   backAndForth(e.keyCode);
 }
 
+var current = 0;
+
 function backAndForth(keyCode) {
   if (keyCode == 37)
-    scroll(500, 0);
+    scroll(current, current -= 500);
 
   if (keyCode == 39)
-    scroll(0, 500);
+    scroll(current, current += 500);
 }
 
 document.addEventListener('keydown', handleEvent);
