@@ -18,3 +18,9 @@ function scroll(start, end) {
 
   var loop = setInterval(move, 50);
 }
+
+function handleEvent(e) {
+  console.log(e, e.keyCode);
+}
+
+document.addEventListener('keydown', handleEvent);
